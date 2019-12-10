@@ -1,0 +1,36 @@
+Você receberá um arquivo com o formato csv contendo alguns personagens de quadrinhos e/ou desenhos animados e você deverá realizar as alterações que foram solicitadas abaixo pelo cliente.
+1.	Selecione todos os registros.
+2.	Selecione apenas o primeiro registro.
+3.	Selecione todos os registros em que o nome seja igual a ‘Shrek’ ou a quantidade de gatos seja igual a 2.
+4.	Selecione todos os registros em que o local de nascimento seja igual a Roma e necessariamente que a quantidade de cachorros seja igual a 3.
+5.	Selecione todos os registros em que a quantidade de gatos seja igual a 3 ou a quantidade de cachorros seja igual a 6.
+6.	Selecione todos os registros em que o nome comece com C.
+7.	Selecione todos os registros em que o nome comece com H.
+8.	Selecione todos os registros em que o nome termine com a.
+9.	Selecione todos os registros em que o nome contenha s.
+10.	Selecione todos os registros em que o nome contenha ‘e’ ou ‘o’.
+11.	Insira 3 novos super-heróis.
+12.	Delete 1 super-herói em que o nome seja igual a Thor.
+13.	Atualize a quantidade de gatos em que o usuário com o registro de nome ‘Thor’ possui. Atualize a quantidade de gatos de ‘0’ para ‘7’.
+14.	Selecione todos os registros que foram trabalhados e exporte para um arquivo JSON.
+
+ db.tasks.insertMany([
+{ ordem: 1, nome: "Batman", dataNascimento: "25/03/1996", local: "Detroit", qtdGatos: "2", qtdCachorro: "7" },
+{ ordem: 2, nome: "Capitão America", dataNascimento: "01/04/1996", local: "EUA", qtdGatos: "0", qtdCachorro: "9"},
+{ ordem: 3, nome: "Homem Formiga", dataNascimento: "29/07/1996", local: "Londres", qtdGatos: "4", qtdCachorro: "5"},
+{ ordem: 4, nome: "Shrek", dataNascimento: "08/04/1996", local: "Londres", qtdGatos: "5", qtsCachorro: "2"},
+{ ordem: 5, nome: "Popeye", dataNacimento: "22/07/1996", local: "São Paulo", qtdGatos: "2", qtdCachorro: "1"},
+{ ordem: 6, nome: "Mulher Maravilha", dataNacimento: "15/04/1996", local: "Itália", qtdGatos: "3", qtdCachorro: "0"},
+{ ordem: 7, nome: "Hawkeye", dataNacimento: "22/04/1996", local: "Roma", qtdGatos: "1", qtdCachorro: "0"},
+{ ordem: 8, nome: "Pantera Negra", dataNacimento: "22/04/1996", local: "Roma", qtdGatos: "1", qtdCachorro: "3"},
+{ ordem: 9, nome: "Hulk", dataNacimento: "10/06/1996", local: "Paris", qtdGatos: "1", qtdCachorro: "1"},
+{ ordem: 10, nome: "Homem Aranha", dataNacimento: "17/06/1996", local: "Suécia", qtdGatos: "0", qtdCachorro: "2"},
+{ ordem: 11, nome: "Wolverine", dataNacimento: "24/06/1996", local: "Austrália", qtdGatos: "2", qtdCachorro: "0"},
+{ ordem: 12, nome: "Deadpool", dataNacimento: "01/07/1996", local: "Suécia", qtdGatos: "3", qtdCachorro: "4"},
+{ ordem: 13, nome: "Thor", dataNacimento: "08/07/1996", local: "RJ", qtdGatos: "4", qtdCachorro: "5"},
+{ ordem: 14, nome: "Justiceiro", dataNacimento: "15/07/1996", local: "RJ", qtdGatos: "5", qtdCachorro: "6"}
+])
+
+1. db.tasks.find().pretty()
+2. db.tasks.find({ordem : 1}).pretty()
+3. db.tasks.
